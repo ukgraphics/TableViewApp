@@ -23,14 +23,12 @@ namespace TableViewApp
 
 		[Action ("ClickedButton:")]
 		partial void ClickedButton (Foundation.NSObject sender);
+
+		[Action ("ClickedGetButton:")]
+		partial void ClickedGetButton (Foundation.NSObject sender);
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (TableView1 != null) {
-				TableView1.Dispose ();
-				TableView1 = null;
-			}
-
 			if (TableColumn1 != null) {
 				TableColumn1.Dispose ();
 				TableColumn1 = null;
@@ -39,6 +37,11 @@ namespace TableViewApp
 			if (TableColumn2 != null) {
 				TableColumn2.Dispose ();
 				TableColumn2 = null;
+			}
+
+			if (TableView1 != null) {
+				TableView1.Dispose ();
+				TableView1 = null;
 			}
 		}
 	}

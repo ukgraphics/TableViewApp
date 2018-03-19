@@ -58,5 +58,14 @@ namespace TableViewApp
 
             TableView1.EndUpdates();
         }
+
+        partial void ClickedGetButton(Foundation.NSObject sender)
+        {
+            var DataSource = new ProductTableDataSource();
+            DataSource = (TableViewApp.ProductTableDataSource)TableView1.DataSource;
+
+            var TitleStr = DataSource.Products[(int)TableView1.SelectedRow].Title;
+            Console.WriteLine(TitleStr);
+        }
     }
 }
