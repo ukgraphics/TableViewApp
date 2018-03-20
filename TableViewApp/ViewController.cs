@@ -37,9 +37,9 @@ namespace TableViewApp
 
             // Create the Product Table Data Source and populate it
             var DataSource = new ProductTableDataSource();
-            //DataSource.Products.Add(new Product("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
-            //DataSource.Products.Add(new Product("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
-            //DataSource.Products.Add(new Product("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
+            DataSource.Products.Add(new Product("Xamarin.iOS", "Allows you to develop native iOS Applications in C#"));
+            DataSource.Products.Add(new Product("Xamarin.Android", "Allows you to develop native Android Applications in C#"));
+            DataSource.Products.Add(new Product("Xamarin.Mac", "Allows you to develop Mac native Applications in C#"));
 
             // Populate the Product Table
             TableView1.DataSource = DataSource;
@@ -66,6 +66,9 @@ namespace TableViewApp
 
             var TitleStr = DataSource.Products[(int)TableView1.SelectedRow].Title;
             Console.WriteLine(TitleStr);
+
+            var DescriptionStr = DataSource.Products[(int)TableView1.SelectedRow].Description;
+            Console.WriteLine(DescriptionStr);
         }
     }
 }
