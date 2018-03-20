@@ -1,2 +1,2 @@
 # TableViewApp
-Xamarin.Mac TableView Test. Add Row, Edit Row, Get Row String.
+Xamarin.Mac TableView Test. Add row, Edit row, Get selected row string.
